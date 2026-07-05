@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n%$$%x5@n@6vauga_a9amu=aj3sgo1-0!wmv3sb4#l)3losit+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['roti-ledger.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
