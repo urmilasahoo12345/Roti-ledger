@@ -47,3 +47,14 @@ This is a monorepo containing both the backend and frontend codebases:
 /ledger: Contains the Django backend applications.
 
 /config: Contains the Django project settings and routing.
+
+📱 Screenshots
+
+<img width="1080" height="2412" alt="Screenshot_2026-07-06-09-40-37-76_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/85991110-3679-44bf-ad15-d99707f0492e" />
+
+<img width="1080" height="2412" alt="Screenshot_2026-07-06-09-42-42-85_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/b51b1a4e-087e-47c4-9f84-1d34cfdffd66" />
+
+<img width="1080" height="2412" alt="Screenshot_2026-07-06-09-42-16-07_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/fd52c8c5-66f9-42dc-b70c-b7d9cee05082" />
+
+<img width="1080" height="2412" alt="Screenshot_2026-07-06-09-41-52-25_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/1926a273-0ef5-4a08-8952-edba3d0a3cb7" />
+
