@@ -1,101 +1,222 @@
-Roti Ledger 🥖
+# 🥖 Roti Ledger
 
-A full-stack mobile application built to manage customer ledgers, daily deliveries, and cash payments for a local Roti business.
+A **full-stack mobile application** built to manage **customer ledgers, daily roti deliveries, and cash payments** for a local roti business. The application automates balance calculations, tracks customer transactions, and provides a simple and efficient way to manage daily business operations.
 
-🚀 Features
+---
 
-Customer Management: Add new customers and set custom pricing per roti for each individual.
+# 🚀 Features
 
-Daily Deliveries: Log daily roti deliveries. The system automatically calculates the cost based on the customer's specific rate.
+### 👥 Customer Management
+- Add new customers.
+- Set a **custom price per roti** for each customer.
 
-Payment Tracking: Record cash payments received from customers.
+### 🥖 Daily Deliveries
+- Record daily roti deliveries.
+- Automatically calculate the delivery amount based on the customer's individual pricing.
 
-Automated Ledger: The system automatically recalculates outstanding balances whenever a delivery or payment is logged.
+### 💰 Payment Tracking
+- Record cash payments received from customers.
+- Maintain accurate payment history.
 
-Transaction History: View a chronological history of all deliveries and payments for any customer.
+### 📒 Automated Ledger
+- Automatically update customer balances whenever a delivery or payment is recorded.
+- Eliminate manual calculations.
 
-Secure Authentication: Token-based authentication ensures data is protected.
+### 📜 Transaction History
+- View a complete chronological history of:
+  - Deliveries
+  - Payments
+  - Running balance
 
-🛠️ Technology Stack
+### 🔐 Secure Authentication
+- Token-based authentication protects user data and API endpoints.
 
-Frontend (Mobile App)
+---
 
-Flutter (Dart)
+# 🛠️ Technology Stack
 
-Riverpod (State Management)
+## 📱 Frontend
 
-HTTP (API Communication)
+- **Flutter**
+- **Dart**
+- **Riverpod** (State Management)
+- **HTTP Package** (REST API Communication)
+- **Material 3 Design**
 
-Material 3 Design
+## ⚙️ Backend
 
-Backend (API & Database)
+- **Python**
+- **Django**
+- **Django REST Framework**
+- **Token Authentication**
 
-Django (Python)
+## 🗄️ Database
 
-Django REST Framework
+- **PostgreSQL**
+- Hosted on **Render**
 
-PostgreSQL (Hosted on Render)
+---
 
-Token Authentication
+# 🏗️ Project Architecture
 
-🏗️ Architecture
+This project follows a **monorepo architecture**, containing both the backend and frontend codebases.
 
-This is a monorepo containing both the backend and frontend codebases:
+```
+project-root/
+│
+├── roti_app/      # Flutter mobile application
+│
+├── ledger/        # Django application (models, views, serializers)
+│
+├── config/        # Django project configuration and routing
+│
+├── manage.py
+│
+└── requirements.txt
+```
 
-/roti_app: Contains the Flutter mobile application.
+# 💻 Local Development Setup
 
-/ledger: Contains the Django backend applications.
+## Prerequisites
 
-/config: Contains the Django project settings and routing.
+Before running the project locally, make sure you have installed:
 
-💻 Local Development Setup
+- Flutter SDK
+- Python 3.x
+- PostgreSQL
+- Git
 
-To run this project locally, you will need Flutter and Python installed.
+---
 
-Backend Setup
+## ⚙️ Backend Setup
 
-Navigate to the project root directory.
+### 1. Clone the repository
 
-Activate the virtual environment:
+```bash
+git clone <repository-url>
+cd Roti-ledger
+```
 
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate # Mac/Linux
+### 2. Activate the virtual environment
 
+**Windows**
 
-Install dependencies (if needed):
+```bash
+.venv\Scripts\activate
+```
 
+**Mac/Linux**
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+### 4. Apply database migrations
 
-Run the server:
+```bash
+python manage.py migrate
+```
 
+### 5. Start the Django server
+
+```bash
 python manage.py runserver
+```
 
+The backend will run on:
 
-Frontend Setup
+```
+http://127.0.0.1:8000/
+```
 
-Open a new terminal and navigate to the Flutter app directory:
+---
 
+## 📱 Frontend Setup
+
+Open another terminal.
+
+Navigate to the Flutter project.
+
+```bash
 cd roti_app
+```
 
+Install Flutter packages.
 
-Install packages:
-
+```bash
 flutter pub get
+```
 
+Run the application.
 
-Run the app (ensure an emulator is running or a device is connected):
-
+```bash
 flutter run
+```
 
+> **Note**
+>
+> To connect the Flutter app to your local backend, change:
+>
+> ```dart
+> isProduction = false;
+> ```
+>
+> inside:
+>
+> ```
+> lib/main.dart
+> ```
 
-Note: To test against your local backend, change isProduction = false in lib/main.dart.
+---
 
-☁️ Deployment
+# ☁️ Deployment
 
-Backend: Deployed on Render using Gunicorn and a PostgreSQL database.
+## Backend
 
-Frontend: Built as an Android APK (flutter build apk --release).
+- Django
+- Gunicorn
+- PostgreSQL
+- Hosted on **Render**
+
+## Frontend
+
+Generate a release APK using:
+
+```bash
+flutter build apk --release
+```
+
+---
+
+# 📚 Project Highlights
+
+- ✅ Full-stack mobile application
+- ✅ RESTful API architecture
+- ✅ Token-based authentication
+- ✅ Automated ledger calculations
+- ✅ Customer-specific pricing
+- ✅ PostgreSQL database
+- ✅ Flutter + Django integration
+- ✅ Production-ready backend deployment
+
+---
+
+# 🔮 Future Improvements
+
+- PDF invoice generation
+- Export ledger to Excel
+- Customer analytics dashboard
+- Push notifications
+- Offline data synchronization
+- Multi-user support
+- Search and filter functionality
+
 
 📱 Screenshots
 
@@ -106,4 +227,8 @@ Frontend: Built as an Android APK (flutter build apk --release).
 <img width="1080" height="2412" alt="Screenshot_2026-07-06-09-42-16-07_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/fd52c8c5-66f9-42dc-b70c-b7d9cee05082" />
 
 <img width="1080" height="2412" alt="Screenshot_2026-07-06-09-41-52-25_c2d0a91198de1cadbd9f2c71380f77b5" src="https://github.com/user-attachments/assets/1926a273-0ef5-4a08-8952-edba3d0a3cb7" />
+
+# 👨‍💻 Author
+
+*Bibhudatta Sahoo*
 
